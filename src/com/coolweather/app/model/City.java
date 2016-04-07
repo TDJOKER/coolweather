@@ -1,4 +1,4 @@
-package comcoolweather.app.model;
+package com.coolweather.app.model;
 
 public class City {
 

@@ -1,15 +1,16 @@
-package comcoolweather.app.db;
+package com.coolweather.app.db;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.coolweather.app.model.City;
+import com.coolweather.app.model.County;
+import com.coolweather.app.model.Province;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import comcoolweather.app.model.City;
-import comcoolweather.app.model.County;
-import comcoolweather.app.model.Province;
 
 public class CoolWeatherDB {
 	
@@ -65,7 +66,7 @@ public class CoolWeatherDB {
 	 * 从数据库获取全国的所有省信息
 	 * @return
 	 */
-	public List<Province> loadProvince(){
+	public List<Province> loadProvinces(){
 		List<Province> list = new ArrayList<Province>();
 		Cursor cursor = db.query("Province", null, null, null, null, null, null);
 		if (cursor.moveToFirst()) {
